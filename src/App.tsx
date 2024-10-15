@@ -1,5 +1,5 @@
 import "./App.css";
-import { GerenciamentoEmail } from "./estudos/gerenciamento-Email";
+import { Contador } from "./estudos/contador";
 
 function App() {
 	// const { data, error, isLoading } = useFetch<DataProps>(
@@ -15,7 +15,9 @@ function App() {
 				<div key={item.cell}>{item.name.first}</div>
 			))} */}
 
-			<GerenciamentoEmail />
+			{/* <GerenciamentoEmail /> */}
+
+			<Contador />
 		</>
 	);
 }
