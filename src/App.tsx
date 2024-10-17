@@ -1,5 +1,4 @@
-import "./App.css";
-import { Contador } from "./estudos/contador";
+import { Carrinho } from "./estudos/carrinho-compras";
 
 function App() {
 	// const { data, error, isLoading } = useFetch<DataProps>(
@@ -17,7 +16,8 @@ function App() {
 
 			{/* <GerenciamentoEmail /> */}
 
-			<Contador />
+			{/* <Contador /> */}
+			<Carrinho />
 		</>
 	);
 }
