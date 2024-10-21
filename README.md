@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Estudos React
 
 Este repositório é voltado para estudos utilizando o `useReducer` no React. O projeto contém os seguintes projetos:
@@ -93,4 +93,4 @@ src/App.tsx: Componente principal da aplicação
 
 **Licença**
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
->>>>>>> 8c312700ab03bb8a04cc441f201b154902f8bb31
+
