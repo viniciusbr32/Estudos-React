@@ -1,13 +1,24 @@
-# Todo List com useReducer
+# Projeto de Estudos com Reducer
 
-Este repositório contém um projeto de lista de tarefas (Todo List) desenvolvido com React, utilizando o hook `useReducer`. O objetivo principal deste projeto é aprender e experimentar com a gestão de estado em aplicações React usando o `useReducer`.
+Este repositório é um projeto de estudos que utiliza o hook `useReducer` do React. O objetivo é explorar diferentes funcionalidades e conceitos de gerenciamento de estado.
 
-## Funcionalidades
+## Projetos Incluídos
 
-- **Lista de Tarefas**: Adicionar novas tarefas, remover tarefas e marcar tarefas como concluídas.
-- **Contador**: Um contador simples que pode ser incrementado ou decrementado.
-- **Carrinho de Compras**: Um gerenciamento básico de itens em um carrinho de compras.
-- **Gerenciamento de Email**: Funcionalidade para gerenciar uma lista de emails.
+1. **Lista de Tarefas**: 
+   - Adicionar novas tarefas
+   - Remover tarefas
+   - Marcar tarefas como concluídas
+
+2. **Contador**: 
+   - Um contador simples que pode ser:
+     - Incrementado
+     - Decrementado
+
+3. **Carrinho de Compras**: 
+   - Um gerenciamento básico de itens em um carrinho de compras.
+
+4. **Gerenciamento de Email**: 
+   - Gerenciar o estado do email e do nome de usuário.
 
 ## Tecnologias Utilizadas
 
