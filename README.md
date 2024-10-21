@@ -32,8 +32,9 @@ Para rodar este projeto em sua máquina local, siga os passos abaixo:
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seuusuario/seurepositorio.git
-   cd seurepositorio
+    git clone https://github.com/viniciusbr32/Estudos-React.git
+   cd Estudos-React
+
 
 **Instale as dependências**:npm install
 **Inicie o servidor de desenvolvimento**:npm run dev
