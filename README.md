@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Todo List com useReducer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém um projeto de lista de tarefas (Todo List) desenvolvido com React, utilizando o hook `useReducer`. O objetivo principal deste projeto é aprender e experimentar com a gestão de estado em aplicações React usando o `useReducer`.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Lista de Tarefas**: Adicionar novas tarefas, remover tarefas e marcar tarefas como concluídas.
+- **Contador**: Um contador simples que pode ser incrementado ou decrementado.
+- **Carrinho de Compras**: Um gerenciamento básico de itens em um carrinho de compras.
+- **Gerenciamento de Email**: Funcionalidade para gerenciar uma lista de emails.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS (para estilos)
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Para rodar este projeto em sua máquina local, siga os passos abaixo:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seuusuario/seurepositorio.git
+   cd seurepositorio
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+**Instale as dependências**:npm install
+**Inicie o servidor de desenvolvimento**:npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**Acesse a aplicação**: Abra o seu navegador e vá para http://localhost:5173.
+
+**Estrutura do Projeto**
+src/components: Contém os componentes reutilizáveis da aplicação.
+src/App.tsx: Componente principal da aplicação
+
+**Licença**
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
