@@ -1,4 +1,4 @@
-import { Carrinho } from "./estudos/carrinho-compras";
+import { TodoList } from "./estudos/todo-list";
 
 function App() {
 	// const { data, error, isLoading } = useFetch<DataProps>(
@@ -17,7 +17,7 @@ function App() {
 			{/* <GerenciamentoEmail /> */}
 
 			{/* <Contador /> */}
-			<Carrinho />
+			<TodoList />
 		</>
 	);
 }
