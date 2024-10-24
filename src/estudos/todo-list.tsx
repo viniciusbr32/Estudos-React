@@ -4,11 +4,12 @@ import { TaskEmpty } from "@/components/taskEmpty";
 import { Button } from "@/components/ui/button";
 import type { Action, State, Todo } from "@/type-todolist/type-todolist";
 import { PlusCircle } from "lucide-react";
-import { useReducer, useState } from "react";
+
+import { useEffect, useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const initialState: State = {
-	todos: [],
+	todos: JSON.parse(localStorage.getItem("todos") || "[]"),
 };
 
 const reducer = (state: State, action: Action) => {
@@ -68,6 +69,10 @@ export function TodoList() {
 	function EditItem(id: string, newText: string) {
 		dispatch({ type: "edit", payload: { id, newText } });
 	}
+
+	useEffect(() => {
+		localStorage.setItem("todos", JSON.stringify(state.todos));
+	}, [state.todos]);
 
 	const completedTasksCount = state.todos.filter(
 		(todo: Todo) => todo.checked,

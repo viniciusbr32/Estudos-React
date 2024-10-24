@@ -35,6 +35,7 @@ export function Modal({
 					<Input
 						type="text"
 						value={newText}
+						placeholder="Digite o novo valor"
 						onChange={(e) => setNewtext(e.target.value)}
 					/>
 				</form>
