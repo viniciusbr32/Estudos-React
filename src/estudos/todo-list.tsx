@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Task } from "@/components/task";
 import { TaskEmpty } from "@/components/taskEmpty";
 import { Button } from "@/components/ui/button";
-import type { Action, State } from "@/type-todolist/type-todolist";
+import type { Action, State, Todo } from "@/type-todolist/type-todolist";
 import { PlusCircle } from "lucide-react";
 import { useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -26,6 +26,15 @@ const reducer = (state: State, action: Action) => {
 			return {
 				...state,
 				todos: state.todos.filter((todo) => todo.id !== action.payload.id),
+			};
+		case "edit":
+			return {
+				...state,
+				todos: state.todos.map((todo) =>
+					todo.id === action.payload.id
+						? { ...todo, text: action.payload.newText }
+						: todo,
+				),
 			};
 		case "toggle":
 			return {
@@ -56,7 +65,13 @@ export function TodoList() {
 		dispatch({ type: "toggle", payload: { id } });
 	}
 
-	const completedTasksCount = state.todos.filter((todo) => todo.checked).length;
+	function EditItem(id: string, newText: string) {
+		dispatch({ type: "edit", payload: { id, newText } });
+	}
+
+	const completedTasksCount = state.todos.filter(
+		(todo: Todo) => todo.checked,
+	).length;
 
 	return (
 		<div>
@@ -96,6 +111,7 @@ export function TodoList() {
 						onRemove={RemoveItem}
 						checked={item.checked}
 						onToggle={ToggleItem}
+						EditTodo={EditItem}
 					/>
 				))}
 				{state.todos.length === 0 && <TaskEmpty />}

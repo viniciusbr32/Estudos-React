@@ -23,4 +23,9 @@ export type ToggleAction = {
 	payload: { id: string };
 };
 
-export type Action = AddAction | RemoveAction | ToggleAction;
+export type EditAction = {
+	type: "edit";
+	payload: { id: string; newText: string };
+};
+
+export type Action = AddAction | RemoveAction | ToggleAction | EditAction;
