@@ -9,6 +9,7 @@ Este repositório é voltado para estudos utilizando o `useReducer` no React. O 
 - Adicionar novas tarefas.
 - Remover tarefas.
 - Marcar tarefas como concluídas.
+- Editar Tarefas
 
 ### Contador
 - Um contador simples que pode ser incrementado ou decrementado.
